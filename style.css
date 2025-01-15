@@ -1,11 +1,27 @@
 body {
-    background-color: #f0f0f0;
+    background-color: var(--backgrnd);
+    color: var(--writing);
     font-family: Arial, sans-serif;
     margin: 0 auto;
     padding: 0;
     width: 800px;
 }
 
+#dark {
+    float: right;
+}
+
 h1 {
     text-align: center;
+}
+
+/* Variables */
+:root {
+    --backgrnd: #f0f0f0;
+    --writing: #05080e;
+}
+
+.dark-mode {
+    --backgrnd: #05080e;
+    --writing: #f0f0f0;
 }
