@@ -9,19 +9,47 @@ body {
 
 #dark {
     float: right;
+    font-size: large;
+    color: var(--writing);
+    background-color: var(--backgrnd);;
+    box-shadow: 7px 7px 2px var(--shade);
+    margin-top: 30px;
+    padding: 10px;
+    border-radius: 50%;
+    border-width: 4px;
+}
+#dark:hover {
+    color: var(--writing);
+    background-color: var(--accent);
+}
+
+#dark:active {
+    box-shadow: 4px 4px 2px var(--shade2);
+    transform: translateY(3px);
+    background-color: var(--accent2);
 }
 
 h1 {
     text-align: center;
+    font-size: 5em;
+    text-shadow: 7px 7px 2px var(--shade);
 }
 
 /* Variables */
 :root {
     --backgrnd: #f0f0f0;
     --writing: #05080e;
+    --shade: #afadad;
+    --shade2: #8d8b8b;
+    --accent: rgb(0, 176, 0);
+    --accent2: rgb(217, 0, 0);
 }
 
 .dark-mode {
     --backgrnd: #05080e;
     --writing: #f0f0f0;
+    --shade: #2d2d2d;
+    --shade2: #1d1d1d;
+    --accent: green;
+    --accent2: darkred;
 }

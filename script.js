@@ -1,5 +1,11 @@
 // DARK MODE
 function toggleDark() {
-    var element = document.body;
-    element.classList.toggle("dark-mode");
+    let bodyElement = document.body;
+    bodyElement.classList.toggle("dark-mode");
+    let modeButton = document.getElementById("dark");
+    if(modeButton.innerHTML === "Dark Mode") {
+        modeButton.innerHTML = "Light Mode";
+    } else {
+        modeButton.innerHTML = "Dark Mode";
+    }
 }
