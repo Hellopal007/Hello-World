@@ -4,9 +4,10 @@ body {
     font-family: Arial, sans-serif;
     margin: 0 auto;
     padding: 0;
-    border: 1px solid black
 }
-
+h1 {
+    text-align: center;
+}
 #dark {
     float: right;
     color: var(--writing);
@@ -18,13 +19,8 @@ body {
     color: var(--writing);
     background-color: var(--accent);
 }
-
 #dark:active {
     background-color: var(--accent2);
-}
-
-h1 {
-    text-align: center;
 }
 
 /* Variables */
@@ -36,7 +32,6 @@ h1 {
     --accent: rgb(0, 176, 0);
     --accent2: rgb(217, 0, 0);
 }
-
 .dark-mode {
     --backgrnd: #05080e;
     --writing: #f0f0f0;
@@ -46,7 +41,27 @@ h1 {
     --accent2: darkred;
 }
 
-@media(min-width: 800px) {
+@media(min-width:1200px) {
+    body {
+        width: 1200px;
+    }
+    h1 {
+        font-size: 10em;
+        text-shadow: 10px 10px 2px var(--shade);
+    }    
+    #dark {
+        font-size: small;
+        padding: 7px;
+        box-shadow: 5px 5px 2px var(--shade);
+        border-width: 2px;
+    }
+    #dark:active {
+        box-shadow: 3px 3px 2px var(--shade2);
+        transform: translateY(2px);
+    }
+}
+
+@media(min-width: 800px) and (max-width: 1199px) {
     body {
         width: 800px;
     }
@@ -55,18 +70,18 @@ h1 {
         text-shadow: 7px 7px 2px var(--shade);
     }    
     #dark {
-        font-size: large;
-        padding: 10px;
-        box-shadow: 7px 7px 2px var(--shade);
-        border-width: 3px;
+        font-size: small;
+        padding: 7px;
+        box-shadow: 5px 5px 2px var(--shade);
+        border-width: 2px;
     }
     #dark:active {
-        box-shadow: 4px 4px 2px var(--shade2);
-        transform: translateY(3px);
+        box-shadow: 3px 3px 2px var(--shade2);
+        transform: translateY(2px);
     }
 }
 
-@media(min-width: 480px) and (max-width: 800px) {
+@media(min-width: 480px) and (max-width: 799px) {
     body {
         width: 480px;
     }
