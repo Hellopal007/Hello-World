@@ -4,19 +4,15 @@ body {
     font-family: Arial, sans-serif;
     margin: 0 auto;
     padding: 0;
-    width: 800px;
+    border: 1px solid black
 }
 
 #dark {
     float: right;
-    font-size: large;
     color: var(--writing);
-    background-color: var(--backgrnd);;
-    box-shadow: 7px 7px 2px var(--shade);
-    margin-top: 30px;
-    padding: 10px;
+    background-color: var(--backgrnd);;  
     border-radius: 50%;
-    border-width: 4px;
+    
 }
 #dark:hover {
     color: var(--writing);
@@ -24,15 +20,11 @@ body {
 }
 
 #dark:active {
-    box-shadow: 4px 4px 2px var(--shade2);
-    transform: translateY(3px);
     background-color: var(--accent2);
 }
 
 h1 {
     text-align: center;
-    font-size: 5em;
-    text-shadow: 7px 7px 2px var(--shade);
 }
 
 /* Variables */
@@ -52,4 +44,64 @@ h1 {
     --shade2: #1d1d1d;
     --accent: green;
     --accent2: darkred;
+}
+
+@media(min-width: 800px) {
+    body {
+        width: 800px;
+    }
+    h1 {
+        font-size: 6em;
+        text-shadow: 7px 7px 2px var(--shade);
+    }    
+    #dark {
+        font-size: large;
+        padding: 10px;
+        box-shadow: 7px 7px 2px var(--shade);
+        border-width: 3px;
+    }
+    #dark:active {
+        box-shadow: 4px 4px 2px var(--shade2);
+        transform: translateY(3px);
+    }
+}
+
+@media(min-width: 480px) and (max-width: 800px) {
+    body {
+        width: 480px;
+    }
+    h1 {
+        font-size: 3.5em;
+        text-shadow: 5px 5px 2px var(--shade);
+    }
+    #dark {
+        font-size: small;
+        padding: 7px;
+        box-shadow: 5px 5px 2px var(--shade);
+        border-width: 2px;
+    }
+    #dark:active {
+        box-shadow: 3px 3px 2px var(--shade2);
+        transform: translateY(2px);
+    }
+}
+
+@media(max-width:479px) {
+    body {
+        width: 320px;
+    }
+    h1 {
+        font-size: 2.5em;
+        text-shadow: 3px 3px 1px var(--shade);
+    }
+    #dark {
+        font-size: x-small;
+        padding: 5px;
+        box-shadow: 3px 3px 1px var(--shade);
+        border-width: 1px;
+    }
+    #dark:active {
+        box-shadow: 2px 2px 2px var(--shade2);
+        transform: translateY(1px);
+    }
 }
