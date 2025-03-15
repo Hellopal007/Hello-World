@@ -10,3 +10,14 @@ function toggleDark() {
         modeButton.innerHTML = "Dark Mode";
     }
 }
+
+function updateTime() {
+    const clock = document.getElementById('clock');
+    const now = new Date();
+    clock.textContent = now.toLocaleTimeString();
+}
+
+// Update time every second
+setInterval(updateTime, 1000);
+// Initial call to display time immediately
+updateTime();
